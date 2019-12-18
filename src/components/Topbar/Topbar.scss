@@ -1,0 +1,60 @@
+@import '../../css/variables.scss';
+
+#topbar {
+    width: 100%;
+    height: 75px;
+    padding: 10px 20px;
+    background: $darkGray;
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    
+    // Flex Box
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .logo {
+        font-size: 14px;
+        margin-right: 30px;
+    }
+
+    .searchBar {
+        border: solid 1px $gray;
+        padding: 8px 15px;
+        border-radius: 15px;
+        position: relative;
+
+        // Flex Box
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+
+        .icon {
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+        #homeSearch {
+            background: none;
+            font-size: 12px;
+
+            &::placeholder {
+                color: $lightGray;
+                font-size: 10px;
+                font-weight: 300;
+                font-style: oblique;
+            }
+        }
+    }
+
+    .notification {
+        position: fixed;
+        top: 28;
+        right: 35px;
+        font-size: 13px;
+        cursor: pointer;
+        z-index: 9999;
+    }
+}

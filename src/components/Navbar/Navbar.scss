@@ -1,0 +1,138 @@
+@import '../../css/variables.scss';
+
+#navbar {
+    height: 100vh;
+    width: $navbarWidth;
+    background: $darkGray;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+
+    // Flex Box
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+    .profile {
+        width: 100%;
+        flex: 0 1 30%;
+        min-height: 235px;
+        padding: 30px 20px;
+
+        // Flex Box
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-end;
+
+        .picture {
+            width: 65px;
+            height: 65px;
+            border-radius: 60px;
+            margin-bottom: 16px;
+        }
+
+        .name {
+            font-weight: 400;
+            font-size: 15px;
+            color: $white;
+            margin-bottom: 5px;
+        }
+
+        .nickname {
+            font-weight: 300;
+            font-size: 11px;
+            margin-bottom: 15px;
+            cursor: pointer;
+
+            &:hover {
+                color: $white;
+            }
+        }
+
+        .status {
+            background: $yellow;
+            padding: 10px 35px;
+            color: $white;
+            font-weight: 500;
+            font-size: 13px;
+            cursor: pointer;
+        }
+
+    }
+
+    .menu {
+        width: 100%;
+        flex: 1 1 auto;
+        padding: 0px 0px 30px;
+
+        // Flex Box
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .item {
+            padding-left: 10px;
+            height: 20px;
+            margin: 6px 0;
+            width: 100%;
+            border-left: 5px solid $darkGray;
+            position: relative;
+
+            // Flex Box
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+
+            &:last-child {
+                position: absolute;
+                bottom: 10px;
+            }
+
+            &.active {
+                border-left: 5px solid $yellow;
+                * {
+                    color: $white;
+                    font-weight: 400;
+                }
+            }
+
+            &:hover {
+                border-left: 5px solid $yellow;
+                * {
+                    color: $white;
+                }
+            }
+
+            .icon {
+                font-size: 15px;
+                margin-right: 10px;
+                width: 30px;
+            }
+
+            span {
+                font-weight: 300;
+            }
+
+            #search {
+                background: none;
+                font-size: 12px;
+                cursor: pointer;
+
+                &::placeholder {
+                    color: $lightGray;
+                    font-size: 12px;
+                    font-weight: 300;
+                }
+
+                &:focus {
+                    background: $lighterBlack;
+                    padding: 5px 10px;
+                }
+            }
+        }
+    }
+}

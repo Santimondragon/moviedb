@@ -1,0 +1,172 @@
+@import '../../css/variables.scss';
+
+#movies,
+#favorites {
+    padding: 20px 0px 0px 30px;
+    width: 100%;
+
+    .title {
+        margin-bottom: 10px;
+    }
+
+    .movieList {
+        width: 100%;
+
+        //Flex 
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        .movie {
+            flex: 0 1 auto;
+            width: calc(20% - 20px);
+            min-width: 200px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+
+            //Flex
+            display: flex;
+            align-items: flex-start;
+            align-content: center;
+            justify-content: flex-start;
+
+            .bg {
+                width: fit-content;
+                min-height: 300px;
+
+                .poster {
+                    min-height: 300px;
+                }
+            }
+
+            .information {
+                min-width: 200px;
+                height: 300px;
+                min-height: 300px;
+                margin-left: -100%;
+                z-index: -1;
+                padding: 25px;
+                user-select: none;
+                background: $black;
+
+                //Flex 
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                justify-content: space-around;
+
+                .title {
+                    font-size: 17px;
+                    font-weight: 500;
+                    margin-bottom: 5px;
+                    max-width: 160px;
+                }
+
+                .rating {
+                    font-size: 13px;
+                    margin-bottom: 20px;
+                    b {
+                        color: $yellow;
+                    }
+                }
+                
+                .runtime {
+                    margin-bottom: 5px;
+                }
+
+                .genreList {
+                    display: flex;
+                    margin-bottom: 12px;
+                    margin-left: -2px;
+        
+                    .genre {
+                        padding: 4px 8px;
+                        margin-right: 7px;
+                        border-radius: 10px;
+                        font-size: 10px;
+                        background: $yellow;
+                        color: $lighterBlack;
+                        font-weight: 600;
+                    }
+                }
+
+                .tagline {
+                    flex: 1 1 auto;
+                    width: 160px;
+                    margin-bottom: 16px;
+                    font-weight: 300;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .buttons {
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: nowrap;
+                    align-items: center;
+                    align-content: center;
+                    justify-content: space-between;
+
+                    button {
+                        border: solid 1px $lighterBlack;
+                        &:hover {
+                            border: solid 1px $gray;
+                        }
+                    }
+    
+                    .favorite {
+                        padding: 10px;
+                        margin-right: 10px;
+
+                        * {
+                            color: $darkGray;
+                        }
+
+                        &:hover, &.selected {
+                            * {
+                                color: $yellow;
+                            } 
+                        }
+                    }
+
+                    .details {
+                        padding: 10px 12px;
+                        flex: 1 1 auto;
+                        color: $gray;
+                        &:hover {
+                            color: $white;
+                        }
+                    }
+                }
+            }
+
+            &.active{
+                width: fit-content;
+                min-width: 420px;
+                height: 100%;
+
+                //Flex
+                display: flex;
+                align-items: flex-start;
+                align-content: center;
+                justify-content: flex-start;
+
+
+                .information {
+                    height: 100%;
+                    min-width: 220px;
+                    margin-left: 0;
+                    z-index: 1;
+                    user-select: none;
+                }
+            }
+        }
+        .hide {
+            display: none;
+        }
+    }
+}

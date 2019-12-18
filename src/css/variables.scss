@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+$black: #0F0F0F;
+$darkerBlack: #0C0C0C;
+$lighterBlack: #1A1A1A;
+$darkGray: #232323;
+$gray: #323232;
+$fontGray: rgb(75, 75, 75);
+$yellow: #E6B21E;
+$lightGray: #c8c8c8;
+$white: #fafafa;
+$shadow: #000000b3;
+$navbarWidth: 230px;
+
+* {
+  box-sizing: border-box;
+  border: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  transition: all 0.15s ease-in-out;
+  color: $lightGray;
+  font-family: 'Fira Sans', sans-serif;
+  list-style: none;
+  scroll-behavior: smooth;
+  letter-spacing: 0.02em;
+
+  &::-webkit-scrollbar-track {
+    background-color: none;
+    border-radius: 5px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb:vertical {
+    background-color: $yellow;
+  }
+
+  &::selection {
+    background: $yellow;
+    opacity: 1;
+    color: $black;
+  }
+}
+
+h1 {
+  font-size: 22px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+h3 {
+  font-size: 18px;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+a,
+p,
+span,
+li {
+  font-size: 13px;
+}
+
+button {
+  background: none;
+}
+
+body {
+    background: $lighterBlack;
+    padding-top: 75px;
+}
